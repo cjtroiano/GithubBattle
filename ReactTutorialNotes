@@ -1,0 +1,27 @@
+React Tutorial Notes
+
+javascrip this.
+	implicit binding
+		me.function()
+			function will use this and
+	explicit binding
+		call()
+			able to use this() but must explicitly pass other arguments.
+		apply()
+			like call but you can pass an array of arguments and it will unpack the array for you
+		bind()
+		like call, but it returns a function
+		var newFN = fn.bind(obj, arg[1], arg[2])
+		newFN()
+	window binding
+		is you call a function that uses this.whatever, and no object is on the left, it is automatically binded to the window object
+		ex:
+			var fn = function(){
+				console.log(this.whatever)
+			}
+			fn() // returns undefined
+			window.whatever = "yo"
+			fn() // returns "yo"
+		if you use strict mode inside the function, it will not bind to the window
+			'use strict';
+
